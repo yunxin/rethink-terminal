@@ -1,0 +1,10 @@
+title: Rethink what a terminal should be for AI CLIs
+description: Essays by Andy Yunxin Wu on the motivations and design choices behind AgentTerm.
+url: https://yunxin.github.io
+baseurl: /rethink-terminal
+lang: en
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - README.md
