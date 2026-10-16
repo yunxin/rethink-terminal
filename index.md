@@ -2,13 +2,13 @@
 layout: default
 ---
 
-# Rethink what a terminal should be for AI CLIs
+# Rethink the terminal: A portal to AI
 
 *Andy Yunxin Wu · A series on the design decisions behind AgentTerm*
 
-Some people love terminals; others hate them. Many are surprised that people use AI through a terminal in 2026.
+AI CLIs have fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and writing, from starting a task to finishing it and revisiting it later.
 
-I have been using AI CLIs in a terminal for coding, planning, review and writing. My focus is on understanding and steering the agents' work, not running commands. While I appreciate what the terminal offers, I want it to work differently, both inside the window and outside it on the desktop.
+My focus is on understanding and steering agents’ work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
 
 I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an experiment and have been using it since January. These essays explore the motivations and design choices behind reshaping the terminal as a portal to AI.
 
@@ -20,28 +20,20 @@ I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an ex
 
 ### 3. [Why documents, code and images open right in the agent’s terminal window](https://github.com/albertwujj/agent-term/blob/main/essays/files-in-terminal.md)
 
-### Plain text as an interface to build on
-
-*Coming soon.* File references and text conventions connect the CLI conversation to richer views and actions in the terminal.
+### 4. Plain text as an interface to build on
 
 ## Building on the terminal
 
-Beyond the terminal itself, I have been exploring how its new capabilities can improve the way I work with agents. These essays describe those experiments, starting with curated review.
+Beyond the terminal itself, I have been exploring how its new capabilities can improve the way I work with agents.
 
-### 4. [Curated code review: explanations grounded in code](https://github.com/albertwujj/agent-term/blob/main/essays/curated-review.md)
+### 5. [Curated code review: explanations grounded in code](https://github.com/albertwujj/agent-term/blob/main/essays/curated-review.md)
 
 I removed the warning about changed lines missing from the walkthrough.
 
-### Why I make my agents share one checkout over separate worktrees
-
-*Coming soon.* How I manage several agents working on the same project, including the conflicts and limits of sharing a checkout.
-
-### Why AgentTerm uses a folder hierarchy of Markdown guides instead of skills
-
-*Coming soon.* How related guides lead agents to the instructions they need, with agent-threads as a concrete example.
+### 6. A hub for agents across machines, with phone and voice access
 
 ---
 
-AgentTerm also supports [commenting directly on an agent's output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md). I may return to broader workflow topics, including writing with coding agents and why I ask my transcription service to skip auto-correction.
+AgentTerm has other features and design choices not covered above, such as [writing with coding agents](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md), [commenting on their terminal output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md) or [copying it without reformatting](https://github.com/albertwujj/agent-term/blob/main/docs/copy.md), [connecting to an IDE](https://github.com/albertwujj/agent-term/blob/main/docs/ide.md), [running long jobs](https://github.com/albertwujj/agent-term/blob/main/docs/jobs.md), [coordinating a shared workspace](https://github.com/albertwujj/agent-term/blob/main/docs/lock.md), and [setting up and invoking guides across AI CLIs using a namespace convention based on folder paths](https://github.com/albertwujj/agent-term/blob/main/docs/conventions.md#guides-across-cli-vendors).
 
-[AgentTerm: source, demonstration and setup](https://github.com/albertwujj/agent-term#agentterm)
+Check out the [AgentTerm repo](https://github.com/albertwujj/agent-term#agentterm), try it for yourself, and build on it.

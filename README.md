@@ -1,4 +1,4 @@
-# Rethink what a terminal should be for AI CLIs
+# Rethink the terminal: A portal to AI
 
 The landing page for Andy Yunxin Wu's essays on AgentTerm.
 
