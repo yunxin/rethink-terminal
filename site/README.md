@@ -36,9 +36,10 @@ pages and deploys the build artifact directly to GitHub Pages. Generated HTML is
 not committed. Publishing uses GitHub's temporary workflow credentials, with no
 cross-repository deploy key or personal access token.
 
-The public URL remains `https://yunxin.github.io/rethink-terminal/`. The old essay
-and series-index URLs in AgentTerm remain small Markdown links to the website for
-readers arriving from the Reddit post.
+The public URL remains `https://yunxin.github.io/rethink-terminal/`. The original
+essay URL in AgentTerm remains a small Markdown link to the website for readers
+arriving from the Reddit post. The post body links directly to the series landing
+page; the old `essays/README.md` index was removed.
 
 For a manual rebuild:
 
