@@ -28,8 +28,9 @@ p { margin: 0 0 1.15rem; }
 .landing h3 { margin: 1.65rem 0 0.45rem; font-size: 1.18rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.45; }
 .landing h2 + h3 { margin-top: 0; }
 .landing h3 + p { color: var(--muted); }
-.landing h3 a { color: var(--ink); text-decoration-color: var(--note-accent, var(--link)); text-decoration-thickness: 2px; text-underline-offset: 0.19em; }
-.landing h3 a:hover { text-decoration-thickness: 3px; }
+.landing h3 a { color: var(--ink); text-decoration: none; }
+.landing h3 a::after { content: "\00a0→"; color: var(--note-accent, var(--link)); font-weight: 500; }
+.landing h3 a:hover { color: var(--link); }
 .landing h3 a[href$="/own-os-window/"] { --note-accent: #608b86; }
 .landing h3 a[href$="/run-from-source/"] { --note-accent: #a38147; }
 .landing h3 a[href$="/files-in-terminal/"] { --note-accent: #6686ab; }
