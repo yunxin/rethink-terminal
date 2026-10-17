@@ -1,6 +1,6 @@
 # Rethink the terminal: A portal to AI
 
-Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and writing, from starting a task to finishing it and revisiting it later.
+Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and drafting, from starting a task to finishing it and revisiting it later.
 
 My focus is on understanding and steering agents’ work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
 
@@ -34,6 +34,6 @@ The agent interprets my spoken instructions in the context of our work.
 
 ---
 
-AgentTerm has other features and design choices not covered above, such as [writing with coding agents](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md), [commenting on their terminal output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md) or [copying it without reformatting](https://github.com/albertwujj/agent-term/blob/main/docs/copy.md), [connecting to an IDE](https://github.com/albertwujj/agent-term/blob/main/docs/ide.md), [running long jobs](https://github.com/albertwujj/agent-term/blob/main/docs/jobs.md), [coordinating a shared workspace](https://github.com/albertwujj/agent-term/blob/main/docs/lock.md), and [setting up and invoking guides across AI CLIs using a namespace convention based on folder paths](https://github.com/albertwujj/agent-term/blob/main/docs/conventions.md#guides-across-cli-vendors).
+AgentTerm has other features and design choices not covered above, such as [drafting with coding agents](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md), [commenting on their terminal output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md) or [copying it without reformatting](https://github.com/albertwujj/agent-term/blob/main/docs/copy.md), [connecting to an IDE](https://github.com/albertwujj/agent-term/blob/main/docs/ide.md), [running long jobs](https://github.com/albertwujj/agent-term/blob/main/docs/jobs.md), [coordinating a shared workspace](https://github.com/albertwujj/agent-term/blob/main/docs/lock.md), and [setting up and invoking guides across AI CLIs using a namespace convention based on folder paths](https://github.com/albertwujj/agent-term/blob/main/docs/conventions.md#guides-across-cli-vendors).
 
 Check out the [AgentTerm repo](https://github.com/albertwujj/agent-term#agentterm), try it for yourself, and build on it.
