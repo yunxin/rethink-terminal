@@ -1,6 +1,6 @@
 # Rethink the terminal: A portal to AI
 
-Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and drafting, from starting a task to finishing it and revisiting it later.
+Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and drafting, from start to finish, and when revisiting it later.
 
 My focus is on understanding and steering AI’s work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
 

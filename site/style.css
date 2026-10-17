@@ -28,6 +28,14 @@ p { margin: 0 0 1.15rem; }
 .landing h3 { margin: 1.65rem 0 0.45rem; font-size: 1.18rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.45; }
 .landing h2 + h3 { margin-top: 0; }
 .landing h3 + p { color: var(--muted); }
+.landing h3 a { color: var(--ink); text-decoration-color: var(--note-accent, var(--link)); text-decoration-thickness: 2px; text-underline-offset: 0.19em; }
+.landing h3 a:hover { text-decoration-thickness: 3px; }
+.landing h3 a[href$="/own-os-window/"] { --note-accent: #608b86; }
+.landing h3 a[href$="/run-from-source/"] { --note-accent: #a38147; }
+.landing h3 a[href$="/files-in-terminal/"] { --note-accent: #6686ab; }
+.landing h3 a[href$="/plain-text-interface/"] { --note-accent: #927799; }
+.landing h3 a[href$="/curated-review/"] { --note-accent: #b17d69; }
+.landing h3 a[href$="/hub-across-machines/"] { --note-accent: #82926b; }
 .article h2 { margin: 2.8rem 0 1rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.7rem; font-weight: 500; line-height: 1.3; letter-spacing: -0.02em; }
 .article h3 { margin: 2rem 0 0.8rem; font-size: 1.12rem; line-height: 1.4; }
 .article li { margin-bottom: 0.5rem; }
