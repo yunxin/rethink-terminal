@@ -1,10 +1,10 @@
 # Rethink the terminal: A portal to AI
 
-AI CLIs have fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and writing, from starting a task to finishing it and revisiting it later.
+Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and writing, from starting a task to finishing it and revisiting it later.
 
 My focus is on understanding and steering agents’ work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
 
-I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an experiment and have been using it since January. These notes share some of the thinking behind its design.
+I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an experiment and have been using it since January. These notes share some of the thinking behind its design. [See AgentTerm in action](https://github.com/albertwujj/agent-term#demo).
 
 ## Rethinking the terminal
 
