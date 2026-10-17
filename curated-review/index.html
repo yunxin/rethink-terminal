@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curated code review: explanations grounded in code</title>
+    <meta name="description" content="When an agent finishes a code change, I want to understand how the pieces fit together and which choices need my judgment. A full diff shows what changed. Reconstructing the reasoning from it can take considerable work.">
+    <meta name="author" content="Andy Yunxin Wu">
+    <meta name="theme-color" content="#faf9f6">
+    <link rel="canonical" href="https://yunxin.github.io/rethink-terminal/curated-review/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Curated code review: explanations grounded in code">
+    <meta property="og:description" content="When an agent finishes a code change, I want to understand how the pieces fit together and which choices need my judgment. A full diff shows what changed. Reconstructing the reasoning from it can take considerable work.">
+    <meta property="og:url" content="https://yunxin.github.io/rethink-terminal/curated-review/">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="/rethink-terminal/assets/style.css">
+  </head>
+  <body class="article">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="page">
+      <header class="site-header">
+        <a class="series-link" href="/rethink-terminal/">Rethink the terminal</a>
+        <a class="repo-link" href="https://github.com/albertwujj/agent-term">AgentTerm on GitHub <span aria-hidden="true">↗</span></a>
+      </header>
+      <main id="content">
+        <h1 id="curated-code-review-explanations-grounded-in-code">Curated code review: explanations grounded in code</h1>
+<p><em>Andy Yunxin Wu, October 2026. The fifth in a <a href="/rethink-terminal/">series on the design decisions behind AgentTerm</a>.</em></p>
+<p class="github-only"><a href="/rethink-terminal/curated-review/">Read the formatted essay</a></p>
+<p>When an agent finishes a code change, I want to understand how the pieces fit together and which choices need my judgment. A full diff shows what changed. Reconstructing the reasoning from it can take considerable work.</p>
+<h2 id="english-explains-the-code-connections-and-changes-code-grounds-the-explanation">English explains the code, connections and changes; code grounds the explanation</h2>
+<p>I ask the agent to prepare a curated walkthrough. It groups related changes across files and orders them so I can follow their dependencies. A helper can appear before its callers, with a short explanation of how they relate. Routine changes can be left out so the important parts stand out.</p>
+<p>English carries assumptions, alternatives and relationships that no single diff hunk explains. The code makes those claims inspectable. An existing function may matter to understanding a new caller even though the function did not change. The walkthrough can include that code too, with the explanation beside it.</p>
+<p>Diff tools can <a href="https://git-scm.com/docs/git-diff">hint at code moves</a>, but not always reliably. An agent can inspect the code to identify what moved and what changed, then explain why in English. Diagrams or other visuals could help in the future.</p>
+<h2 id="make-the-choices-visible">Make the choices visible</h2>
+<p>The agent can give an unsettled decision its own heading, stating what it chose, what it costs and the alternative. That gives me something concrete to question. I can confirm the choice as written or discuss another approach; the agreed choice remains recorded in the walkthrough.</p>
+<p><img src="/rethink-terminal/media/essays/assets/curated-review-example.png" alt="A review combining English, unchanged helper code and a diff: one decision is confirmed in green, while another stays yellow with a user objection on the changed code."></p>
+<p><em>An illustrative review, with one choice confirmed and another questioned on the code.</em></p>
+<p>In <a href="/rethink-terminal/files-in-terminal/">the previous essay</a>, I described discussing and refining a document in the agent's terminal window. Code review uses the same feedback loop.</p>
+<p>I can comment on a passage in the explanation or on a code line. The agent answers and revises the explanation or implementation, and the review updates in place. Confirming a design choice and completing a requested fix are separate things: agreeing on the approach still leaves the agent responsible for making the result match it.</p>
+<h2 id="a-small-package-with-code-supplied-by-git">A small package, with code supplied by Git</h2>
+<p>The agent writes a Markdown review package containing its explanation and references to file ranges. AgentTerm renders those references using code and diffs from Git. The agent supplies the selection and reasoning; the renderer supplies the referenced code.</p>
+<p><a href="/rethink-terminal/media/essays/assets/review-package-flow.svg"><img src="/rethink-terminal/media/essays/assets/review-package-flow.svg" alt="Agent-authored Markdown supplies explanations and code references; Git supplies committed code and diffs. AgentTerm combines them into a rendered walkthrough."></a></p>
+<p>A review refers to a committed version of the code. The agent updates it as the implementation changes, and AgentTerm warns if the review is out of date or its code references are invalid.</p>
+<p>The discussion uses the <a href="https://github.com/albertwujj/agent-threads/blob/main/contract.md">same thread contract</a> as documents. A comment can identify a passage in the explanation or a line on a particular side of the diff. The discussion remains separate from the generated page, so rebuilding the presentation preserves it. The previous essay covers that shared model in more detail.</p>
+<h2 id="still-learning-what-makes-a-good-walkthrough">Still learning what makes a good walkthrough</h2>
+<p>I have used the document workflow much more than the review workflow. I expect to keep improving how much code and explanation a review should include, and how it should be organized.</p>
+<p>An early version warned the agent when changed lines were missing from the walkthrough. I removed that check because covering the diff is a different goal from helping me understand the change. I want the agent to choose what needs explaining and how to explain it, while I can ask to go deeper or see the full change.</p>
+<p>The part I want to keep improving is how the agent chooses the level of explanation and the code or visuals that help me judge the result.</p>
+<p><a href="https://github.com/albertwujj/agent-term#agentterm">AgentTerm: demonstration and setup</a></p>
+
+      </main>
+      <nav class="essay-navigation" aria-label="Essay navigation"><a class="previous" href="/rethink-terminal/files-in-terminal/"><span>← Previous essay</span>Why documents, code and images open right in the agent’s terminal window</a><a class="next" href="/rethink-terminal/"><span>Back to</span>The series →</a></nav>
+      <footer class="site-footer">
+        <span>Andy Yunxin Wu</span>
+        <a href="https://github.com/albertwujj/agent-term/blob/main/essays/curated-review.md">View Markdown source</a>
+      </footer>
+    </div>
+  </body>
+</html>

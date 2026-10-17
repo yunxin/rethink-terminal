@@ -1,19 +1,7 @@
 # Rethink the terminal: A portal to AI
 
-The landing page for Andy Yunxin Wu's essays on AgentTerm.
+Generated website for https://yunxin.github.io/rethink-terminal/
 
-Read the series at **https://yunxin.github.io/rethink-terminal/**.
+Edit the [landing page and essays](https://github.com/albertwujj/agent-term/tree/main/essays) in AgentTerm. This repository is a publishing target; its files are replaced automatically.
 
-The individual essays live in [AgentTerm](https://github.com/albertwujj/agent-term/tree/main/essays).
-
-## Updating the page
-
-The landing-page text is maintained in [`index.md`](index.md). Discuss and
-revise that file directly, keeping its YAML front matter. The layout is in
-`_layouts/default.html` and its styles are in `assets/style.css`.
-
-Commit and push changes to `main` to publish them. GitHub Pages builds the
-site with Jekyll from the root of that branch.
-
-This repository contains only the series landing page. Links to essays point
-to their current versions in the AgentTerm repository.
+Source commit: 7d90615f78b169fc9ef97012a713448ad30f4e44
