@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+<title id="title">Two conventions, one terminal text interface</title>
+<desc id="desc">Guides tell an agent what to produce. A conversation guide asks for a document in .git/conversation, while a review guide asks for a review package. The agent prints a plain path or a review link in ordinary terminal output. AgentTerm recognizes the agreed convention and opens a document or renders a review. Guides teach the conventions; AgentTerm implements their behavior.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#697586"/></marker>
+  <style>
+    text {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;fill:#233044}
+    .heading {font-size:22px;font-weight:600}
+    .label {font-size:20px;font-weight:600}
+    .detail {font-size:19px;fill:#526174}
+    .small {font-size:16px;fill:#526174}
+    .code {font-family:Menlo,Consolas,monospace;font-size:18px}
+    .guide {font-family:Menlo,Consolas,monospace;font-size:20px;font-weight:600}
+    .edge {fill:none;stroke:#697586;stroke-width:2;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="900" height="500" rx="14" fill="#fafbfd"/>
+<text x="310" y="35" class="heading" text-anchor="middle">Conversation document</text>
+<text x="695" y="35" class="heading" text-anchor="middle">Code review</text>
+<text x="20" y="109" class="label">Guide</text>
+<text x="20" y="136" class="small">Agent follows</text>
+<text x="20" y="252" class="label">Terminal</text>
+<text x="20" y="279" class="label">text</text>
+<text x="20" y="393" class="label">AgentTerm</text>
+<text x="20" y="420" class="small">Implements</text>
+<g data-box="document-guide">
+  <rect x="140" y="65" width="340" height="112" rx="10" fill="#f2ecff" stroke="#b9a2da" stroke-width="1.5"/>
+  <text x="158" y="98" class="guide">continue-in-doc.md</text>
+  <text x="158" y="130" class="detail">Save a topic under</text>
+  <text x="158" y="155" class="code">.git/conversation/</text>
+</g>
+<g data-box="review-guide">
+  <rect x="520" y="65" width="350" height="112" rx="10" fill="#f2ecff" stroke="#b9a2da" stroke-width="1.5"/>
+  <text x="538" y="98" class="guide">produce-review.md</text>
+  <text x="538" y="130" class="detail">Create a review package</text>
+  <text x="538" y="155" class="detail">Print its review:// link</text>
+</g>
+<path d="M310 177V205" class="edge"/>
+<path d="M695 177V205" class="edge"/>
+<g data-box="document-output">
+  <rect x="140" y="210" width="340" height="100" rx="10" fill="#f1f3f6" stroke="#a9b3c0" stroke-width="1.5"/>
+  <text x="158" y="251" class="code">/repo/.git/conversation/</text>
+  <text x="158" y="279" class="code">topic.md</text>
+</g>
+<g data-box="review-output">
+  <rect x="520" y="210" width="350" height="100" rx="10" fill="#f1f3f6" stroke="#a9b3c0" stroke-width="1.5"/>
+  <text x="538" y="251" class="code">review:///repo/.git/review/</text>
+  <text x="538" y="279" class="code">change/change.md</text>
+</g>
+<path d="M310 310V345" class="edge"/>
+<path d="M695 310V345" class="edge"/>
+<g data-box="document-action">
+  <rect x="140" y="350" width="340" height="100" rx="10" fill="#edf8f2" stroke="#8fbca7" stroke-width="1.5"/>
+  <text x="158" y="388" class="label">Recognize the folder</text>
+  <text x="158" y="420" class="detail">Open the document</text>
+</g>
+<g data-box="review-action">
+  <rect x="520" y="350" width="350" height="100" rx="10" fill="#edf8f2" stroke="#8fbca7" stroke-width="1.5"/>
+  <text x="538" y="388" class="label">Recognize review://</text>
+  <text x="538" y="420" class="detail">Render the review</text>
+</g>
+<text x="450" y="482" class="small" text-anchor="middle">Guides teach the conventions; AgentTerm implements their behavior.</text>
+</svg>

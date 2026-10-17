@@ -2,7 +2,7 @@
 
 Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and drafting, from starting a task to finishing it and revisiting it later.
 
-My focus is on understanding and steering agents’ work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
+My focus is on understanding and steering AI’s work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
 
 I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an experiment and have been using it since January. These notes share some of the thinking behind its design. [See AgentTerm in action](https://github.com/albertwujj/agent-term#demo).
 
@@ -10,15 +10,19 @@ I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an ex
 
 ### [Why I give each lead agent its own OS window and a unique Dock tile or taskbar button](https://yunxin.github.io/rethink-terminal/own-os-window/)
 
+Agents show up when needed.
+
 ### [Why I run AgentTerm from source](https://yunxin.github.io/rethink-terminal/run-from-source/)
 
 My agent changes the source; the next window runs it. No installer dialog or launch command.
 
 ### [Why documents, code and images open right in the agent’s terminal window](https://yunxin.github.io/rethink-terminal/files-in-terminal/)
 
-The agent writes; we collaborate on the rendered content.
+The agent produces content; we collaborate on the rendered result.
 
-### Plain text as an interface to build on
+### [Building on the terminal’s text interface](https://yunxin.github.io/rethink-terminal/plain-text-interface/)
+
+AgentTerm understands agents; agents understand AgentTerm.
 
 ## Building on the terminal
 
@@ -28,7 +32,7 @@ Beyond the terminal itself, I have been exploring how its new capabilities can i
 
 I removed a check so the agent could focus on what needs my judgment.
 
-### A hub for agents across machines, with phone and voice access
+### [A hub for agents across machines, with phone and voice access](https://yunxin.github.io/rethink-terminal/hub-across-machines/)
 
 The agent interprets my spoken instructions in the context of our work.
 

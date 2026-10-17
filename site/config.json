@@ -17,8 +17,16 @@
       "number": 3
     },
     {
+      "file": "plain-text-interface.md",
+      "number": 4
+    },
+    {
       "file": "curated-review.md",
       "number": 5
+    },
+    {
+      "file": "hub-across-machines.md",
+      "number": 6
     }
   ],
   "sourceRepository": "https://github.com/yunxin/rethink-terminal",
