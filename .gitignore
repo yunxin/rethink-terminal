@@ -1,0 +1,4 @@
+node_modules/
+output/
+.agent-threads/
+.DS_Store

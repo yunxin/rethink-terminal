@@ -50,7 +50,6 @@ pre code { padding: 0; background: none; }
 .diagram { margin: 1.8rem 0; text-align: center; }
 .diagram svg { width: 100%; }
 .diagram a { cursor: zoom-in; }
-.github-only { display: none; }
 
 hr { height: 0; margin: 2.75rem 0 1.4rem; border: 0; border-top: 1px solid var(--line); }
 .landing hr ~ p { color: var(--muted); font-size: 0.95rem; }
