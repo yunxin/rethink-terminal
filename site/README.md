@@ -1,10 +1,11 @@
-# Maintain the essay series
+# Maintain the design notes
 
 The website and its sources live in this repository. Edit `README.md` for the
-landing page and `essays/*.md` for individual essays. The page template and styles
-are `site/page.html` and `site/style.css`.
+landing page and `essays/*.md` for individual notes. The page template and styles
+are `site/page.html` and `site/style.css`. The author and date shown together in
+each page’s footer are set in `site/config.json`; an entry can override the date.
 
-`site/config.json` explicitly lists the finished essays to publish. Drafts are
+`site/config.json` explicitly lists the finished notes to publish. Drafts are
 excluded until added to that list and linked from the landing page. Article titles
 and bodies come from their Markdown files. The public pages do not link to the
 Markdown source.
@@ -23,8 +24,8 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory output
 Open `http://localhost:8000/rethink-terminal/`. The default build directory is
 `output/rethink-terminal`; pass another output directory after `--` when needed.
 
-The builder converts Markdown to HTML, rewrites essay links, copies referenced
-media, and renders Mermaid diagrams as static SVG. Standalone SVG exports are
+The builder converts Markdown to HTML, rewrites links between notes, copies
+referenced media, and renders Mermaid diagrams as static SVG. Standalone SVG exports are
 serialized and validated as XML. Reading the website requires no JavaScript or
 external fonts. The snapshots under `docs/assets` illustrate AgentTerm and keep
 the media URLs used by the original published site.
@@ -37,8 +38,8 @@ not committed. Publishing uses GitHub's temporary workflow credentials, with no
 cross-repository deploy key or personal access token.
 
 The public URL remains `https://yunxin.github.io/rethink-terminal/`. The original
-essay URL in AgentTerm remains a small Markdown link to the website for readers
-arriving from the Reddit post. The post body links directly to the series landing
+article URL in AgentTerm remains a small Markdown link to the website for readers
+arriving from the Reddit post. The post body links directly to the landing
 page; the old `essays/README.md` index was removed.
 
 For a manual rebuild:

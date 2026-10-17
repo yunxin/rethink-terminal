@@ -1,7 +1,5 @@
 # Curated code review: explanations grounded in code
 
-*Andy Yunxin Wu, October 2026. The fifth in a [series on the design decisions behind AgentTerm](https://yunxin.github.io/rethink-terminal/).*
-
 When an agent finishes a code change, I want to understand how the pieces fit together and which choices need my judgment. A full diff shows what changed. Reconstructing the reasoning from it can take considerable work.
 
 ## English explains the code, connections and changes; code grounds the explanation
@@ -20,7 +18,7 @@ The agent can give an unsettled decision its own heading, stating what it chose,
 
 *An illustrative review, with one choice confirmed and another questioned on the code.*
 
-In [the previous essay](files-in-terminal.md), I described discussing and refining a document in the agent's terminal window. Code review uses the same feedback loop.
+In [the note on documents in the terminal](files-in-terminal.md), I described discussing and refining a document in the agent's terminal window. Code review uses the same feedback loop.
 
 I can comment on a passage in the explanation or on a code line. The agent answers and revises the explanation or implementation, and the review updates in place. Confirming a design choice and completing a requested fix are separate things: agreeing on the approach still leaves the agent responsible for making the result match it.
 
@@ -32,7 +30,7 @@ The agent writes a Markdown review package containing its explanation and refere
 
 A review refers to a committed version of the code. The agent updates it as the implementation changes, and AgentTerm warns if the review is out of date or its code references are invalid.
 
-The discussion uses the [same thread contract](https://github.com/albertwujj/agent-threads/blob/main/contract.md) as documents. A comment can identify a passage in the explanation or a line on a particular side of the diff. The discussion remains separate from the generated page, so rebuilding the presentation preserves it. The previous essay covers that shared model in more detail.
+The discussion uses the [same thread contract](https://github.com/albertwujj/agent-threads/blob/main/contract.md) as documents. A comment can identify a passage in the explanation or a line on a particular side of the diff. The discussion remains separate from the generated page, so rebuilding the presentation preserves it. That note covers the shared model in more detail.
 
 ## Still learning what makes a good walkthrough
 

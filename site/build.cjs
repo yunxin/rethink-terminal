@@ -87,7 +87,7 @@ function render(page) {
   visit(tokens);
   const h1 = tokens.findIndex(token => token.type === 'heading_open' && token.tag === 'h1');
   page.title = tokens[h1 + 1].content;
-  const description = tokens.find((token, i) => token.type === 'inline' && i > h1 + 4 && token.content.length > 100)?.content.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*`]/g, '') || config.description;
+  const description = tokens.find((token, i) => token.type === 'inline' && i > h1 + 2 && token.content.length > 100)?.content.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*`]/g, '') || config.description;
   page.body = md.renderer.render(tokens, md.options, {});
   page.description = description;
 }
@@ -97,7 +97,7 @@ function navigation(index) {
   const previous = essays[index - 1];
   const next = essays[index + 1];
   const link = (entry, label, cls) => `<a class="${cls}" href="${base}${entry.slug}/"><span>${label}</span>${escape(entry.title)}</a>`;
-  return `<nav class="essay-navigation" aria-label="Essay navigation">${previous ? link(previous, '← Previous essay', 'previous') : `<a href="${base}"><span>← Back to</span>The series</a>`}${next ? link(next, 'Next essay →', 'next') : `<a class="next" href="${base}"><span>Back to</span>The series →</a>`}</nav>`;
+  return `<nav class="essay-navigation" aria-label="Reading navigation">${previous ? link(previous, '← Previous', 'previous') : `<a href="${base}"><span>← Back to</span>All notes</a>`}${next ? link(next, 'Next →', 'next') : `<a class="next" href="${base}"><span>Back to</span>All notes →</a>`}</nav>`;
 }
 
 async function main() {
@@ -139,7 +139,7 @@ async function main() {
   }
   for (const [index, page] of pages.entries()) {
     const canonical = new URL(page.slug ? page.slug + '/' : '', config.url).href;
-    const values = { title: escape(page.title), description: escape(page.description), author: escape(config.author), canonical, ogType: page.slug ? 'article' : 'website', base, kind: page.slug ? 'article' : 'landing', repository: config.repository, content: page.body, navigation: page.slug ? navigation(index - 1) : '' };
+    const values = { title: escape(page.title), description: escape(page.description), author: escape(config.author), date: escape(page.date || config.date), canonical, ogType: page.slug ? 'article' : 'website', base, kind: page.slug ? 'article' : 'landing', repository: config.repository, content: page.body, navigation: page.slug ? navigation(index - 1) : '' };
     const html = template.replace(/\{\{(\w+)\}\}/g, (_all, name) => { if (!(name in values)) throw new Error(`Unknown template field ${name}`); return values[name]; });
     const destination = path.join(output, page.slug);
     fs.mkdirSync(destination, { recursive: true });

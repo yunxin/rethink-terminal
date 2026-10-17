@@ -1,7 +1,5 @@
 # Why documents, code and images open right in the agent’s terminal window
 
-*Andy Yunxin Wu, October 2026. The third in a [series on the design decisions behind AgentTerm](https://yunxin.github.io/rethink-terminal/).*
-
 I like how a terminal conversation keeps moving. I ask a question, the agent responds, and I follow an idea into the next question. Together we focus on new ideas as they appear where my eyes already are.
 
 AgentTerm adds [direct commenting on the agent's output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md): I can send an occasional question or correction back to the agent with the quoted passage. If we keep returning to the same passages, especially when those discussions interleave, I ask the agent to [continue in a document](https://github.com/albertwujj/agent-threads/blob/main/conversation/continue-in-doc.md).
@@ -18,7 +16,7 @@ Now I can find a passage on the rendered page, comment on it or write directly o
 
 Many rounds of revisions across different passages are hard to follow in a plain terminal conversation. The agent gives each document a descriptive name and saves it in a known location. When I need to revisit one, I type a few letters in AgentTerm to find it.
 
-This works for designs, essays and other drafts. Code review uses the same feedback loop, with a presentation and interaction model tuned to code and diffs ([curated review essay](curated-review.md)). More types of content can be supported later. The goal is to let agents do more for me and make collaboration easier than in traditional interfaces.
+This works for designs, essays and other drafts. Code review uses the same feedback loop, with a presentation and interaction model tuned to code and diffs ([curated code review](curated-review.md)). More types of content can be supported later. The goal is to let agents do more for me and make collaboration easier than in traditional interfaces.
 
 ## Images need a place to stay
 
