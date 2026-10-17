@@ -18,7 +18,11 @@ I built [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as an ex
 
 ### 2. [Why I run AgentTerm from source](https://github.com/albertwujj/agent-term/blob/main/essays/run-from-source.md)
 
+My agent changes the source; the next window runs it. No installer dialog or launch command.
+
 ### 3. [Why documents, code and images open right in the agent’s terminal window](https://github.com/albertwujj/agent-term/blob/main/essays/files-in-terminal.md)
+
+The agent writes; we collaborate on the rendered content.
 
 ### 4. Plain text as an interface to build on
 
@@ -28,9 +32,11 @@ Beyond the terminal itself, I have been exploring how its new capabilities can i
 
 ### 5. [Curated code review: explanations grounded in code](https://github.com/albertwujj/agent-term/blob/main/essays/curated-review.md)
 
-I removed the warning about changed lines missing from the walkthrough.
+I removed a check so the agent could focus on what needs my judgment.
 
 ### 6. A hub for agents across machines, with phone and voice access
+
+The agent interprets my spoken instructions in the context of our work.
 
 ---
 
