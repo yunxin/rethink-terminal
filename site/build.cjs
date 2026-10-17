@@ -4,6 +4,7 @@
 // Build only the published manifest. Drafts and discussion stores are never copied.
 const fs = require('node:fs');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
 const { execFileSync } = require('node:child_process');
 const MarkdownIt = require('markdown-it');
 const config = require('./config.json');
@@ -12,6 +13,8 @@ const root = path.resolve(__dirname, '..');
 const output = path.resolve(process.argv[2] || path.join(root, 'output/rethink-terminal'));
 const base = new URL(config.url).pathname;
 const template = fs.readFileSync(path.join(__dirname, 'page.html'), 'utf8');
+const stylesheet = fs.readFileSync(path.join(__dirname, 'style.css'));
+const styleVersion = createHash('sha256').update(stylesheet).digest('hex').slice(0, 12);
 const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const pages = [{ file: 'README.md', slug: '', number: null }, ...config.essays.map(essay => ({ ...essay, file: `essays/${essay.file}`, slug: essay.file.replace(/\.md$/, '') }))];
 const routes = new Map(pages.map(page => [path.join(root, page.file), `${base}${page.slug ? page.slug + '/' : ''}`]));
@@ -139,7 +142,7 @@ async function main() {
   }
   for (const [index, page] of pages.entries()) {
     const canonical = new URL(page.slug ? page.slug + '/' : '', config.url).href;
-    const values = { title: escape(page.title), description: escape(page.description), author: escape(config.author), date: escape(page.date || config.date), canonical, ogType: page.slug ? 'article' : 'website', base, kind: page.slug ? 'article' : 'landing', repository: config.repository, content: page.body, navigation: page.slug ? navigation(index - 1) : '' };
+    const values = { title: escape(page.title), description: escape(page.description), author: escape(config.author), date: escape(page.date || config.date), canonical, ogType: page.slug ? 'article' : 'website', base, styleVersion, kind: page.slug ? 'article' : 'landing', repository: config.repository, content: page.body, navigation: page.slug ? navigation(index - 1) : '' };
     const html = template.replace(/\{\{(\w+)\}\}/g, (_all, name) => { if (!(name in values)) throw new Error(`Unknown template field ${name}`); return values[name]; });
     const destination = path.join(output, page.slug);
     fs.mkdirSync(destination, { recursive: true });
@@ -151,7 +154,7 @@ async function main() {
     fs.copyFileSync(source, destination);
   }
   fs.mkdirSync(path.join(output, 'assets'), { recursive: true });
-  fs.copyFileSync(path.join(__dirname, 'style.css'), path.join(output, 'assets/style.css'));
+  fs.writeFileSync(path.join(output, 'assets/style.css'), stylesheet);
   fs.writeFileSync(path.join(output, '.nojekyll'), '');
   let commit = 'local-preview';
   try { commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(); } catch {}
