@@ -92,6 +92,11 @@ function render(page) {
   page.title = tokens[h1 + 1].content;
   const description = tokens.find((token, i) => token.type === 'inline' && i > h1 + 2 && token.content.length > 100)?.content.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*`]/g, '') || config.description;
   page.body = md.renderer.render(tokens, md.options, {});
+  // Decorate only the landing heading; keep the Markdown title and metadata plain.
+  if (!page.slug) {
+    const letters = [...'Rethink'].map(letter => `<span>${letter}</span>`).join('');
+    page.body = page.body.replace(/(<h1\b[^>]*>)Rethink\b/, (_match, heading) => `${heading}<span class="rethink-word">${letters}</span>`);
+  }
   page.description = description;
 }
 
