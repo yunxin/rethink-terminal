@@ -16,9 +16,9 @@ More and more of my work lives in agent sessions. One is fixing code, another is
 
 Each window is a portal to AI through a lead agent, which orchestrates the work and can delegate to subagents. I stay involved through that window, using it to understand and direct the work.
 
-When each agent is a window, all of those tools work on agents directly. Snapping, monitors and Spaces arrange agents like any other window. On a Mac, with each agent full screen, one Mission Control swipe shows every agent at once.
+When each lead agent is a window, all of those tools work on agents directly. Snapping, monitors and Spaces arrange agents like any other window. On a Mac, with each agent full screen, one Mission Control swipe shows every agent at once.
 
-## An identity for each agent
+## An identity for each lead agent
 
 Normally there is one Dock tile or taskbar button per app, so all terminals running different coding agents sit under one terminal tile. AgentTerm gives each agent its own tile, showing two things I can recognize at a glance.
 
