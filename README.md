@@ -4,7 +4,7 @@ Working with AI has fundamentally changed what I use a terminal for.
 
 I now use it for almost all my work: coding, planning, review and drafting, from start to finish, and when revisiting it later. My focus is on understanding and steering AI’s work rather than running commands. That calls for fresh designs around this new kind of interaction, both inside the window and across the desktop.
 
-I built AgentTerm as an experiment and have been using it since January. These notes share some of the thinking behind its design. [See AgentTerm in action](https://github.com/albertwujj/agent-term#demo).
+I built AgentTerm ([demo](https://github.com/albertwujj/agent-term#demo)) as an experiment and have been using it since January. These notes share some of the thinking behind its design.
 
 ## Rethinking the terminal
 
