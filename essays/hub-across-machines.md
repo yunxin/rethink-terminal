@@ -6,7 +6,7 @@ I have one phone but run agents on multiple machines. The [hub](https://github.c
 
 Both AgentTerm and the phone connect outward to the hub over HTTPS. The machine running the agent needs no inbound port or direct connection from the phone. Everything goes through the hub. Keeping that relay efficient and responsive brings several design challenges.
 
-## Send the changes with enough context to join them
+## Overlapping chunks
 
 An AI CLI can append text, redraw earlier output or switch to an alternate screen for a full-screen interface. AgentTerm samples the terminal emulator’s buffer every half second and sends a chunk only when the text changes. This batches bursts of writes and redraws, reducing encoding work and network traffic. Each chunk carries rows of text and their styles.
 
@@ -30,7 +30,7 @@ After an interruption, I want to pick up the current work even if some history i
 
 Sending only changed rows could save more bandwidth, but recovery after a gap would require a complete screen. At this bandwidth, sending chunks with overlap is simpler and sufficient for this viewer. Each chunk stands on its own and can be used to reconstruct the latest screen.
 
-## Keep recent history within a fixed budget
+## History on a fixed budget
 
 The hub keeps a bounded ring buffer of recent chunks for each session. A phone opening the session can reconstruct recent history from that ring before following live output.
 
@@ -40,7 +40,7 @@ Chunks differ in size, so limiting their count alone is not enough. The hub also
 
 The surrounding buffers are bounded too: AgentTerm caps its retry queue, and the phone keeps a limited amount of stitched scrollback. This provides recent working context with bounded memory use.
 
-## Make the relay feel responsive
+## Responsive through the relay
 
 A successful interaction goes full circle: input travels from the phone through the hub to AgentTerm and the CLI, then the updated screen returns through the hub to the phone.
 
@@ -52,7 +52,7 @@ Some delay remains, so the phone interface is designed around it. For example, I
 
 The sent action stays visible while the phone waits for evidence that the CLI has reacted. This helps me avoid sending the same action twice. I can also acknowledge the action and dismiss the wait to continue immediately.
 
-## Let the agent interpret what I said
+## Let the agent interpret
 
 Typing technical instructions on a phone is awkward. English is not my first language, and iPhone dictation has not worked well for me. Other users have also [reported words being recognized correctly and then changed to incorrect ones](https://discussions.apple.com/thread/254410300).
 
