@@ -34,7 +34,7 @@ The document can fill the window while I read it. When I send feedback, the view
 
 I want the whole window available for the part of the work I am focused on. The conversation and the document take turns occupying it.
 
-## Look it up quickly without scrolling or searching through the conversation
+## Quick lookup
 
 Closing a view leaves the file available. The viewer picker prioritizes what I have opened and what the session has shown. I can type part of a name to find a document or image again. It also searches nearby files, starting with the project, so I can open something the agent has never mentioned. This lets me bring in earlier information from outside the current session.
 
