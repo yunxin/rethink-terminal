@@ -40,4 +40,4 @@ An early version warned the agent when changed lines were missing from the walkt
 
 The part I want to keep improving is how the agent chooses the level of explanation and the code or visuals that help me judge the result.
 
-[AgentTerm: demonstration and setup](https://github.com/albertwujj/agent-term#agentterm)
+[See AgentTerm’s review workflow in action](https://github.com/albertwujj/agent-term/blob/main/docs/review.md).

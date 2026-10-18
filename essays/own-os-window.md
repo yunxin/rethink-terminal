@@ -67,3 +67,5 @@ Hidden sessions could all stay alive, but then their memory would add up, so I s
 ## Why it was worth it
 
 I switch between agents all day as I do with every other app: a glance at the Dock, a click, Cmd-Tab. My agents sit where the rest of my work sits, each with a distinct identity. As my sessions accumulate, I keep track of them and avoid having so many in view at the same time that I get confused. It's a pleasure to use every day.
+
+[See AgentTerm’s session tiles and picker in action](https://github.com/albertwujj/agent-term#demo).

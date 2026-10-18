@@ -68,4 +68,4 @@ Today, the viewer holds an update if it would interrupt my writing or the select
 
 Updating while I type can distract me; once I have queued a comment and closed its box, it makes more sense to show changes. I expect to keep tuning this balance between showing the latest work and preserving my focus. The [design notes](https://github.com/albertwujj/agent-term/blob/main/docs/dev/maintainer/md-live-updates-design.md) record the current tradeoffs.
 
-[AgentTerm: demonstration and setup](https://github.com/albertwujj/agent-term#agentterm)
+[See AgentTerm’s document workflow in action](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md).

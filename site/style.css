@@ -45,12 +45,12 @@ p { margin: 0 0 1.15rem; }
 .landing h3 a { color: var(--ink); text-decoration: none; }
 .landing h3 a::after { content: "\00a0→"; color: var(--note-accent, var(--link)); font-weight: 500; }
 .landing h3 a:hover { color: var(--link); }
-.landing h3 a[href$="/own-os-window/"] { --note-accent: var(--accent-blue); }
-.landing h3 a[href$="/run-from-source/"] { --note-accent: var(--accent-red); }
-.landing h3 a[href$="/files-in-terminal/"] { --note-accent: var(--accent-gold); }
-.landing h3 a[href$="/plain-text-interface/"] { --note-accent: var(--accent-green); }
-.landing h3 a[href$="/curated-review/"] { --note-accent: var(--accent-blue); }
-.landing h3 a[href$="/hub-across-machines/"] { --note-accent: var(--accent-red); }
+/* Repeat the title’s color groups across the note links. */
+.landing h3:nth-child(5n + 1 of h3) a,
+.landing h3:nth-child(5n + 4 of h3) a { --note-accent: var(--accent-blue); }
+.landing h3:nth-child(5n + 2 of h3) a { --note-accent: var(--accent-gold); }
+.landing h3:nth-child(5n + 3 of h3) a { --note-accent: var(--accent-red); }
+.landing h3:nth-child(5n + 5 of h3) a { --note-accent: var(--accent-green); }
 .article h2 { margin: 2.8rem 0 1rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.7rem; font-weight: 500; line-height: 1.3; letter-spacing: -0.02em; }
 .article h3 { margin: 2rem 0 0.8rem; font-size: 1.12rem; line-height: 1.4; }
 .article li { margin-bottom: 0.5rem; }

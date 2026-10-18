@@ -62,6 +62,8 @@ Hooks already offer explicit lifecycle events in [Claude Code](https://code.clau
 
 My choice so far has been to minimize vendor-specific integration code by starting with the terminal streams AgentTerm already handles. Most code and tests stay shared. I can evaluate vendor-specific integrations later.
 
-## Take the interface beyond this machine
+## Beyond a single machine
 
-[The hub](hub-across-machines.md) carries this further: I can open the same terminal screen from my phone, recognize where I left off and respond there.
+The text interface connects to [the hub](hub-across-machines.md): I can open the same terminal screen from my phone, recognize where I left off and respond there.
+
+Try [AgentTerm](https://github.com/albertwujj/agent-term#quick-start) and see terminal output come to life: click to open files, jump to code or comment on a passage.
