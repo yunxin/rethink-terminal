@@ -30,7 +30,7 @@ The agent writes a Markdown review package containing its explanation and refere
 
 A review refers to a committed version of the code. The agent updates it as the implementation changes, and AgentTerm warns if the review is out of date or its code references are invalid.
 
-The discussion uses the [same thread contract](https://github.com/albertwujj/agent-threads/blob/main/contract.md) as documents. A comment can identify a passage in the explanation or a line on a particular side of the diff. The discussion remains separate from the generated page, so rebuilding the presentation preserves it. That note covers the shared model in more detail.
+The discussion uses the [same thread contract](https://github.com/albertwujj/agent-threads/blob/main/contract.md) as documents. A comment can identify a passage in the explanation or a line on a particular side of the diff. [The note on documents](files-in-terminal.md#separate-records-one-writer-each) covers the shared model in more detail.
 
 ## Shape the walkthrough
 
