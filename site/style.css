@@ -22,10 +22,12 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-size: 18px; 
 h1 { margin: 0 0 1.1rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.1rem, 5.5vw, 3.15rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.14; text-wrap: balance; }
 .landing h1 { max-width: 25ch; }
 .landing h1 .rethink-word { white-space: nowrap; }
-.landing h1 .rethink-word > span:nth-child(4n + 1) { color: #416b98; }
-.landing h1 .rethink-word > span:nth-child(4n + 2) { color: #ae5447; }
-.landing h1 .rethink-word > span:nth-child(4n + 3) { color: #8e6c24; }
-.landing h1 .rethink-word > span:nth-child(4n + 4) { color: #3e7d68; }
+.landing h1 .rethink-word > span:nth-child(6n + 1),
+.landing h1 .rethink-word > span:nth-child(6n + 4) { color: #4285f4; }
+.landing h1 .rethink-word > span:nth-child(6n + 2),
+.landing h1 .rethink-word > span:nth-child(6n + 6) { color: #ea4335; }
+.landing h1 .rethink-word > span:nth-child(6n + 3) { color: #fbbc05; }
+.landing h1 .rethink-word > span:nth-child(6n + 5) { color: #34a853; }
 .article h1 { font-size: clamp(2rem, 4.7vw, 2.9rem); line-height: 1.18; }
 p { margin: 0 0 1.15rem; }
 
