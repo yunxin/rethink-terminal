@@ -18,7 +18,7 @@ My agent changes the source; the next window runs it. No installer dialog or lau
 
 ### [Why documents, code and images open right in the agent’s terminal window](https://yunxin.github.io/rethink-terminal/files-in-terminal/)
 
-The agent produces content; we collaborate on the rendered pages.
+The agent produces content; it renders and we collaborate on it.
 
 ### [Building on the terminal’s text interface](https://yunxin.github.io/rethink-terminal/plain-text-interface/)
 
@@ -26,15 +26,15 @@ AgentTerm understands agents; agents understand AgentTerm.
 
 ## Building on the terminal
 
-Beyond the terminal itself, I have been exploring how its new capabilities can improve the way I work with agents.
+Beyond the terminal itself, I have been exploring adding new capabilities to improve the way I work with agents.
 
 ### [Curated code review: explanations grounded in code](https://yunxin.github.io/rethink-terminal/curated-review/)
 
-I removed a check so the agent could focus on what needs my judgment.
+I removed a check so we focus on what needs my judgment.
 
 ### [A hub for agents across machines, with phone and voice access](https://yunxin.github.io/rethink-terminal/hub-across-machines/)
 
-The agent interprets my spoken instructions in the context of our work.
+The agent interprets my spoken words in the context of our work.
 
 ---
 
