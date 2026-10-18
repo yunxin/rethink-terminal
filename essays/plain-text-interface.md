@@ -18,7 +18,7 @@ Guides teach agents conventions that AgentTerm recognizes. In both examples belo
 
 [![Two handoffs through ordinary terminal text: guides tell the agent what to produce and print; AgentTerm recognizes a conversation-document path or review link and opens the appropriate view.](assets/text-interface-conventions.svg)](assets/text-interface-conventions.svg)
 
-For the protocol details, see the [document workflow](files-in-terminal.md#technical-notes-two-partners-working-at-once) and [review workflow](curated-review.md#a-small-package-with-code-supplied-by-git).
+For the protocol details, see the [document workflow](files-in-terminal.md#technical-notes-two-partners-working-at-once) and [review workflow](curated-review.md#git-supplies-the-code).
 
 More workflow types can be added using the same pattern.
 
