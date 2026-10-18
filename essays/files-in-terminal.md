@@ -16,15 +16,13 @@ Now I can find a passage on the rendered page, comment on it or write directly o
 
 Many rounds of revisions across different passages are hard to follow in a plain terminal conversation. The agent gives each document a descriptive name and saves it in a known location. When I need to revisit one, I type a few letters in AgentTerm to find it.
 
-This works for designs, essays and other drafts. Code review uses the same feedback loop, with a presentation and interaction model tuned to code and diffs ([curated code review](curated-review.md)). More types of content can be supported later. The goal is to let agents do more for me and make collaboration easier than in traditional interfaces.
+This works for designs, essays and other drafts. Code review uses the same feedback loop, with a presentation and interaction model tuned to code and diffs ([curated code review](curated-review.md)). More types of content can be supported later. The goal is to let agents do more for me and make collaboration easier than in interfaces designed before AI agents existed.
 
-## Images need a place to stay
+## Images open and close
 
-An image is something I want to stop and look at. A diagram may take time to understand, or I may need to refer to it several times while discussing the design. I want it available while new messages arrive.
+An image is something I may look at more than once. A diagram can take a few rounds to fully understand, or I might need to see it again while discussing the design. I want it available when I need it later.
 
-Some terminals already render images directly. [Ghostty supports the Kitty graphics protocol](https://ghostty.org/docs/features), for example. In AgentTerm, I open an image as a file in the viewer. It has a name I can look up, and a view I can bring forward or close as my focus changes. The same area can show PDFs, video and local pages.
-
-The useful addition is a stable place for what I am inspecting. The terminal can roll forward while I bring up and look at the image at my own pace.
+Some terminals already render images directly. [Ghostty supports the Kitty graphics protocol](https://ghostty.org/docs/features), for example. In AgentTerm, I open an image as a file in the viewer. It has a name I can look up, and a view I can close as my focus changes, then bring forward again without scrolling. The same area can show PDFs, video and local pages.
 
 ## One window, changing focus
 
