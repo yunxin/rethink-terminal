@@ -54,7 +54,7 @@ On the input side, a submitted prompt can contain text I never typed. I might ty
 
 ### Keeping parsing responsive
 
-AgentTerm recognizes different patterns in separate passes. This makes it easier to add a new pattern. Multipass parsing is affordable for the modest amount of output a user reads at a time: the parser analyzes new or changed visible text and reuses earlier results for the rest.
+AgentTerm recognizes different patterns in separate passes. This makes it easier to add a new pattern. Multipass parsing is affordable for **the modest amount of output a user reads at a time**: the parser analyzes new or changed visible text and reuses earlier results for the rest. The same scale guides the [hub and phone](hub-across-machines.md#overlapping-chunks) design: each chunk can carry the previous screen as overlap, which keeps joining chunks on the phone simple.
 
 On my M3 Mac, a small parsing benchmark took about half a millisecond to analyze a new screenful and a tenth to confirm that the visible text had not changed. That leaves room to add patterns without noticeable delay in normal use.
 
