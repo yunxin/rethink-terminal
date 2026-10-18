@@ -2,7 +2,7 @@
 
 Working with AI has fundamentally changed what I use a terminal for. I now use it for almost all my work: coding, planning, review and drafting, from start to finish, and when revisiting it later.
 
-My focus is on understanding and steering AI’s work rather than running commands. That calls for a terminal designed around this collaboration, both inside the window and across the desktop.
+My focus is on understanding and steering AI’s work rather than running commands. That calls for fresh designs around this new kind of interaction, both inside the window and across the desktop.
 
 I built AgentTerm as an experiment and have been using it since January. These notes share some of the thinking behind its design. [See AgentTerm in action](https://github.com/albertwujj/agent-term#demo).
 
@@ -18,7 +18,7 @@ My agent changes the source; the next window runs it. No installer dialog or lau
 
 ### [Why documents, code and images open right in the agent’s terminal window](https://yunxin.github.io/rethink-terminal/files-in-terminal/)
 
-The agent produces content; we collaborate on the rendered result.
+The agent produces content; we collaborate on the rendered pages.
 
 ### [Building on the terminal’s text interface](https://yunxin.github.io/rethink-terminal/plain-text-interface/)
 

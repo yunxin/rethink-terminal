@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="510" viewBox="0 0 960 510" role="img" aria-labelledby="title desc">
+<title id="title">A reply goes full circle</title>
+<desc id="desc">Input travels from the phone through the hub to AgentTerm, which passes it to the AI CLI on the agent's machine. The CLI produces output in the local terminal. AgentTerm sends the updated screen back through the same hub to the phone.</desc>
+<defs>
+  <marker id="input-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3575ba"/></marker>
+  <marker id="screen-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#358363"/></marker>
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;fill:#233044}
+    .heading{font-size:26px;font-weight:650}.name{font-size:25px;font-weight:600}.detail{font-size:18px;fill:#526174}
+    .input{fill:none;stroke:#3575ba;stroke-width:2.8;marker-end:url(#input-arrow)}
+    .screen{fill:none;stroke:#358363;stroke-width:2.8;marker-end:url(#screen-arrow)}
+    .input-label{font-size:20px;fill:#2e649e}.screen-label{font-size:20px;fill:#2d7155}
+    .node{fill:#fff;stroke:#bdc9d7;stroke-width:1.5}
+  </style>
+</defs>
+<rect width="960" height="510" rx="18" fill="#fafbfd"/>
+<text x="28" y="40" class="heading">A reply goes full circle</text>
+<text x="932" y="40" text-anchor="end" class="detail">Simplified</text>
+<rect x="646" y="66" width="286" height="396" rx="14" fill="#f0f3f7" stroke="#cbd4e0" stroke-width="1.5"/>
+<text x="789" y="98" text-anchor="middle" class="detail">Machine running the agent</text>
+<rect x="28" y="118" width="190" height="190" rx="12" class="node"/>
+<text x="123" y="211" text-anchor="middle" class="name">Phone</text>
+<text x="123" y="242" text-anchor="middle" class="detail">Send &amp; view</text>
+<rect x="338" y="118" width="190" height="190" rx="12" class="node"/>
+<text x="433" y="211" text-anchor="middle" class="name">Hub</text>
+<text x="433" y="242" text-anchor="middle" class="detail">Queue &amp; relay</text>
+<rect x="670" y="126" width="238" height="160" rx="12" class="node"/>
+<text x="789" y="211" text-anchor="middle" class="name">AgentTerm</text>
+<text x="789" y="242" text-anchor="middle" class="detail">Pull &amp; stream</text>
+<rect x="690" y="366" width="198" height="84" rx="12" class="node"/>
+<text x="789" y="417" text-anchor="middle" class="name">AI CLI</text>
+<path d="M218 164H330" class="input"/>
+<text x="278" y="146" text-anchor="middle" class="input-label">Input</text>
+<path d="M528 164H662" class="input"/>
+<text x="599" y="146" text-anchor="middle" class="input-label">Input</text>
+<path d="M840 286V358" class="input"/>
+<text x="854" y="333" class="input-label">Input</text>
+<path d="M738 366V294" class="screen"/>
+<text x="722" y="333" text-anchor="end" class="screen-label">Output</text>
+<path d="M670 269H536" class="screen"/>
+<text x="599" y="296" text-anchor="middle" class="screen-label">Screen</text>
+<path d="M338 269H226" class="screen"/>
+<text x="278" y="296" text-anchor="middle" class="screen-label">Screen</text>
+<text x="480" y="490" text-anchor="middle" class="detail">The updated screen returns through the same hub.</text>
+</svg>

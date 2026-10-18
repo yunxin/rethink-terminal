@@ -52,15 +52,23 @@ AgentTerm uses both views, combining them where needed to interpret what happene
 
 On the input side, a submitted prompt can contain text I never typed. I might type `@gu` and choose `@docs/guide.md` from the CLI’s completion menu. The completed path comes back as output. AgentTerm combines the typed input with the completed reference on that input row, preserving the full filename in the prompt history so I can find the session by it later.
 
+### Keeping parsing responsive
+
+AgentTerm recognizes different patterns in separate passes. This makes it easier to add a new pattern. Multipass parsing is affordable for the modest amount of output a user reads at a time: the parser analyzes new or changed visible text and reuses earlier results for the rest.
+
+On my M3 Mac, a small parsing benchmark took about half a millisecond to analyze a new screenful and a tenth to confirm that the visible text had not changed. That leaves room to add patterns without noticeable delay in normal use.
+
+Resuming a long conversation brings more text through the stream, but does not require running every clickable-pattern rule over the entire history. For further history discovery, a possible optimization is to scan from newest to oldest in small batches, yielding between them so recent content becomes usable first.
+
+Finding the file behind a recognized filename can take longer than recognizing the text. Those filesystem checks, along with requests to the IDE, run asynchronously, allowing terminal input and output to continue while they complete.
+
 ## Turn detection through the terminal interface
 
 AgentTerm **estimates whose turn it is** to drive the working indicators on each session’s Dock tile or taskbar button. It also sends that estimate to the hub, which shows which agents need me across machines.
 
 Terminal output includes the agent’s work, idle prompt redraws and echoes of my typing. Some CLIs also report that they are ready or waiting for input through title updates. AgentTerm analyzes these signals alongside my typing and prompt submissions to estimate whose turn it is.
 
-Hooks already offer explicit lifecycle events in [Claude Code](https://code.claude.com/docs/en/hooks), [Codex](https://learn.chatgpt.com/docs/hooks) and [Cursor CLI](https://cursor.com/changelog/cli-jan-16-2026).
-
-My choice so far has been to minimize vendor-specific integration code by starting with the terminal streams AgentTerm already handles. Most code and tests stay shared. I can evaluate vendor-specific integrations later.
+Hooks already offer explicit lifecycle events in [Claude Code](https://code.claude.com/docs/en/hooks), [Codex](https://learn.chatgpt.com/docs/hooks) and [Cursor CLI](https://cursor.com/changelog/cli-jan-16-2026). However, my choice so far has been to minimize vendor-specific integration code by starting with the terminal streams AgentTerm already handles. Most code and tests stay shared. I can evaluate vendor-specific integrations later.
 
 ## Beyond a single machine
 

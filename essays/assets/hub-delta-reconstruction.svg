@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="596" viewBox="0 0 960 596" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified joining of chunks with overlap</title>
+  <desc id="desc">The phone already has rows A through F. The next chunk carries the previous screen, rows C through F, as overlap, followed by new rows G and H. The phone keeps A and B, matches C through F, and adds G and H once. The result contains A through H without duplicates.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#697586"/></marker>
+    <style>
+      text {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;fill:#233044}
+      .heading {font-size:26px;font-weight:650}
+      .label {font-size:22px;font-weight:600}
+      .detail {font-size:17px;fill:#526174}
+      .row {font-size:21px;font-weight:600}
+      .old {fill:#f1f3f6;stroke:#c4cdd9}
+      .overlap {fill:#e8f2ff;stroke:#8baee0}
+      .new {fill:#e5f4ec;stroke:#8fbca7}
+    </style>
+  </defs>
+  <rect width="960" height="596" rx="18" fill="#fafbfd"/>
+  <text x="28" y="40" class="heading">Joining chunks with overlap</text>
+  <text x="932" y="40" text-anchor="end" class="detail">Simplified</text>
+  <text x="151.0" y="88" text-anchor="middle" class="label">Already on phone</text>
+  <text x="151.0" y="114" text-anchor="middle" class="detail">6 rows in history</text>
+  <rect x="28" y="136" width="246" height="268" rx="11" fill="#fff" stroke="#cbd4e0" stroke-width="1.5"/>
+  <rect x="42" y="151" width="218" height="33" rx="5" class="old"/>
+  <text x="151.0" y="174" text-anchor="middle" class="row">Row A</text>
+  <rect x="42" y="192" width="218" height="33" rx="5" class="old"/>
+  <text x="151.0" y="215" text-anchor="middle" class="row">Row B</text>
+  <rect x="42" y="233" width="218" height="33" rx="5" class="overlap"/>
+  <text x="151.0" y="256" text-anchor="middle" class="row">Row C</text>
+  <rect x="42" y="274" width="218" height="33" rx="5" class="overlap"/>
+  <text x="151.0" y="297" text-anchor="middle" class="row">Row D</text>
+  <rect x="42" y="315" width="218" height="33" rx="5" class="overlap"/>
+  <text x="151.0" y="338" text-anchor="middle" class="row">Row E</text>
+  <rect x="42" y="356" width="218" height="33" rx="5" class="overlap"/>
+  <text x="151.0" y="379" text-anchor="middle" class="row">Row F</text>
+  <text x="473.0" y="88" text-anchor="middle" class="label">Chunk via hub</text>
+  <text x="473.0" y="114" text-anchor="middle" class="detail">4 overlap + 2 new</text>
+  <rect x="350" y="136" width="246" height="268" rx="11" fill="#fff" stroke="#cbd4e0" stroke-width="1.5"/>
+  <rect x="364" y="151" width="218" height="33" rx="5" class="overlap"/>
+  <text x="473.0" y="174" text-anchor="middle" class="row">Row C</text>
+  <rect x="364" y="192" width="218" height="33" rx="5" class="overlap"/>
+  <text x="473.0" y="215" text-anchor="middle" class="row">Row D</text>
+  <rect x="364" y="233" width="218" height="33" rx="5" class="overlap"/>
+  <text x="473.0" y="256" text-anchor="middle" class="row">Row E</text>
+  <rect x="364" y="274" width="218" height="33" rx="5" class="overlap"/>
+  <text x="473.0" y="297" text-anchor="middle" class="row">Row F</text>
+  <rect x="364" y="315" width="218" height="33" rx="5" class="new"/>
+  <text x="473.0" y="338" text-anchor="middle" class="row">Row G</text>
+  <rect x="364" y="356" width="218" height="33" rx="5" class="new"/>
+  <text x="473.0" y="379" text-anchor="middle" class="row">Row H</text>
+  <text x="805.0" y="88" text-anchor="middle" class="label">After joining</text>
+  <text x="805.0" y="114" text-anchor="middle" class="detail">8 rows in history</text>
+  <rect x="678" y="136" width="254" height="350" rx="11" fill="#fff" stroke="#cbd4e0" stroke-width="1.5"/>
+  <rect x="692" y="151" width="226" height="33" rx="5" class="old"/>
+  <text x="805.0" y="174" text-anchor="middle" class="row">Row A</text>
+  <rect x="692" y="192" width="226" height="33" rx="5" class="old"/>
+  <text x="805.0" y="215" text-anchor="middle" class="row">Row B</text>
+  <rect x="692" y="233" width="226" height="33" rx="5" class="overlap"/>
+  <text x="805.0" y="256" text-anchor="middle" class="row">Row C</text>
+  <rect x="692" y="274" width="226" height="33" rx="5" class="overlap"/>
+  <text x="805.0" y="297" text-anchor="middle" class="row">Row D</text>
+  <rect x="692" y="315" width="226" height="33" rx="5" class="overlap"/>
+  <text x="805.0" y="338" text-anchor="middle" class="row">Row E</text>
+  <rect x="692" y="356" width="226" height="33" rx="5" class="overlap"/>
+  <text x="805.0" y="379" text-anchor="middle" class="row">Row F</text>
+  <rect x="692" y="397" width="226" height="33" rx="5" class="new"/>
+  <text x="805.0" y="420" text-anchor="middle" class="row">Row G</text>
+  <rect x="692" y="438" width="226" height="33" rx="5" class="new"/>
+  <text x="805.0" y="461" text-anchor="middle" class="row">Row H</text>
+  <text x="312" y="284" text-anchor="middle" font-size="38" fill="#697586">+</text>
+  <path d="M616 271H660" fill="none" stroke="#697586" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="151" y="518" text-anchor="middle" class="detail">A–B stay on the phone</text>
+  <text x="473" y="518" text-anchor="middle" class="detail">C–F match existing rows</text>
+  <text x="805" y="518" text-anchor="middle" class="detail">G–H are added once</text>
+  <rect x="116" y="550" width="18" height="18" rx="3" class="old"/>
+  <text x="144" y="565" class="detail">Older rows</text>
+  <rect x="344" y="550" width="18" height="18" rx="3" class="overlap"/>
+  <text x="372" y="565" class="detail">Overlap sent again</text>
+  <rect x="666" y="550" width="18" height="18" rx="3" class="new"/>
+  <text x="694" y="565" class="detail">New rows</text>
+</svg>
