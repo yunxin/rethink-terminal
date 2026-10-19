@@ -26,7 +26,7 @@ AgentTerm understands agents; agents understand AgentTerm.
 
 ## Building on the terminal
 
-Beyond the terminal itself, I have been exploring adding new capabilities to improve the way I work with agents.
+I have been adding capabilities on top of this new terminal.
 
 ### [Curated code review: explanations grounded in code](https://yunxin.github.io/rethink-terminal/curated-review/)
 
