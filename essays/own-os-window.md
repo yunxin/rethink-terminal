@@ -48,7 +48,7 @@ The windows self-coordinate, communicating through small files. Each window publ
 
 Every new window starts as a session picker. It reads those files to discover which sessions already have a Dock tile or taskbar button, which have hidden windows still running, and which need resuming. Picking a hidden session asks its window to show itself. Once that window is back, the picker's process exits. If the window's AgentTerm process was stopped to keep memory within the limit, or it crashed, the picker resumes the session in its own window.
 
-A central manager can still complement the windows: each one already streams to [a hub I host](https://github.com/albertwujj/agent-stream-hub), which shows them on my phone, across all my machines.
+A central manager can still complement the windows: each one already streams to [a hub I host](hub-across-machines.md), which shows them on my phone, across all my machines.
 
 ## The challenges
 
