@@ -14,11 +14,11 @@ Agents show up when needed.
 
 ### [Why I run AgentTerm from source](https://yunxin.github.io/rethink-terminal/run-from-source/)
 
-My agent changes the source; the next window runs it. No installer dialog or launch command.
+Works like an installed app. Personalize it without the friction.
 
 ### [Why documents, code and images open right in the agent’s terminal window](https://yunxin.github.io/rethink-terminal/files-in-terminal/)
 
-The agent produces content; it renders and we collaborate on it.
+I can edit the rendered content to propose changes; the agent refines it and replies in place.
 
 ### [Building on the terminal’s text interface](https://yunxin.github.io/rethink-terminal/plain-text-interface/)
 
