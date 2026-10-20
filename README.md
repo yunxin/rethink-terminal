@@ -34,7 +34,7 @@ I removed a check so we focus on what needs my judgment.
 
 ### [A hub for agents across machines, with phone and voice access](https://yunxin.github.io/rethink-terminal/hub-across-machines/)
 
-My agent knows the input was spoken and uses the context of our work to correct misheard words.
+My agent knows the input was spoken and corrects misheard words using the context of our work.
 
 ---
 
