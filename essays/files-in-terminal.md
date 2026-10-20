@@ -40,8 +40,6 @@ Closing a view leaves the file available. The viewer picker prioritizes what I h
 
 ## Technical notes: two partners working at once
 
-Over time, features built for this workflow have made AgentTerm a capable tool for writing and collaborating with agents in its own right. Building it has meant resolving both interaction design and technical challenges.
-
 The agent and I are two partners working on the same document. An AI CLI turn can take a while, so I want to keep reading and preparing feedback while it works on earlier comments. Either of us can have something new while the other is still busy.
 
 ### Separate records, one writer each
@@ -66,4 +64,4 @@ Today, the viewer holds an update if it would interrupt my writing or the select
 
 Updating while I type can distract me; once I have queued a comment and closed its box, it makes more sense to show changes. I expect to keep tuning this balance between showing the latest work and preserving my focus. The [design notes](https://github.com/albertwujj/agent-term/blob/main/docs/dev/maintainer/md-live-updates-design.md) record the current tradeoffs.
 
-[See AgentTerm’s document workflow in action](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md).
+These features have made AgentTerm a drafting tool in its own right. [Try it](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md).

@@ -18,7 +18,7 @@ Works like an installed app. Personalize it without the friction.
 
 ### [Why documents, code and images open right in the agent’s terminal window](https://yunxin.github.io/rethink-terminal/files-in-terminal/)
 
-I can edit the rendered content to propose changes; the agent refines it and replies in place.
+I can edit the rendered content to propose changes; my agent refines it and replies in place.
 
 ### [Building on the terminal’s text interface](https://yunxin.github.io/rethink-terminal/plain-text-interface/)
 
@@ -34,10 +34,10 @@ I removed a check so we focus on what needs my judgment.
 
 ### [A hub for agents across machines, with phone and voice access](https://yunxin.github.io/rethink-terminal/hub-across-machines/)
 
-The agent interprets my spoken words in the context of our work.
+My agent knows the input was spoken and uses the context of our work to correct misheard words.
 
 ---
 
-AgentTerm has other features and design choices not covered above, such as [drafting with coding agents](https://github.com/albertwujj/agent-term/blob/main/docs/plan.md), [commenting on their terminal output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md) or [copying it without reformatting](https://github.com/albertwujj/agent-term/blob/main/docs/copy.md), [connecting to an IDE](https://github.com/albertwujj/agent-term/blob/main/docs/ide.md), [running long jobs](https://github.com/albertwujj/agent-term/blob/main/docs/jobs.md), [coordinating a shared workspace](https://github.com/albertwujj/agent-term/blob/main/docs/lock.md), and [setting up and invoking guides across AI CLIs using a namespace convention based on folder paths](https://github.com/albertwujj/agent-term/blob/main/docs/conventions.md#guides-across-cli-vendors).
+AgentTerm has other features and design choices not covered above, such as [commenting on agent output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md), [copying it without reformatting](https://github.com/albertwujj/agent-term/blob/main/docs/copy.md), [connecting to an IDE](https://github.com/albertwujj/agent-term/blob/main/docs/ide.md), [running long jobs](https://github.com/albertwujj/agent-term/blob/main/docs/jobs.md), [coordinating a shared workspace](https://github.com/albertwujj/agent-term/blob/main/docs/lock.md), and [setting up and invoking guides across AI CLIs using a namespace convention based on folder paths](https://github.com/albertwujj/agent-term/blob/main/docs/conventions.md#guides-across-cli-vendors).
 
 Check out the [AgentTerm repo](https://github.com/albertwujj/agent-term#agentterm), try it and see how it improves your work, and build on it.
