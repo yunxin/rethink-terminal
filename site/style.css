@@ -38,6 +38,10 @@ h1 { margin: 0 0 1.1rem; font-family: Georgia, "Times New Roman", serif; font-si
 .article h1 { font-size: clamp(2rem, 4.7vw, 2.9rem); line-height: 1.18; }
 p { margin: 0 0 1.15rem; }
 
+.landing p:has(> a > img) { max-width: 34rem; margin: 1.5rem auto 0; }
+.landing p:has(> a > img) img { display: block; width: 100%; aspect-ratio: 3 / 2; mix-blend-mode: multiply; }
+.landing p:has(> a > img) + h2 { margin-top: 1.25rem; }
+
 .landing h2 { margin: 2.75rem 0 1.35rem; padding-top: 1.1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.78rem; font-weight: 650; letter-spacing: 0.13em; line-height: 1.4; text-transform: uppercase; }
 .landing h3 { margin: 1.65rem 0 0.45rem; font-size: 1.18rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.45; }
 .landing h2 + h3 { margin-top: 0; }
