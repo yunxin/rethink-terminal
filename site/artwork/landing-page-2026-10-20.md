@@ -2,7 +2,7 @@
 
 A single 3:2 illustration for both desktop and phone. The focused window and inline discussion have more prominence than in the social-preview composition. The original social-preview files are unchanged.
 
-Published asset: `docs/assets/agentterm-portal-focused-0bc3f856e1f1.jpg` (1536 × 1024, JPEG quality 90).
+Published asset: `docs/assets/agentterm-portal-aligned-4316aa3d3d00.jpg` (1536 × 1024, JPEG quality 90).
 
 Creative edit: built-in image_gen tool. Mechanical JPEG export: macOS sips.
 
@@ -30,4 +30,19 @@ Preserve these details:
 - Code window has clean separate cyan, violet and yellow code strokes and simple off-white braces.
 
 Style: precise polished software illustration, restrained depth with soft shadows. Smooth clean surfaces, straight sharp lines, gentle corner rounding. Warm uniform off-white background #faf9f6 to match the reading page. Avoid texture, paper grain, cloudy gradients, color bleed, smeared code marks, heavy glow, toy-like exaggerated bevels, extra labels, captions, arrows, logos or watermarks. Preserve the calm but vivid original palette. Improve the composition and the prominence of the document discussion, without redesigning the product.
+```
+
+## Tile alignment correction
+
+The Dock tile group moved slightly left to align more closely beneath the foreground window. The composition and responsive sizing are unchanged. The earlier asset remains as `docs/assets/agentterm-portal-focused-0bc3f856e1f1.jpg`.
+
+Generated PNG: `/Users/yunxin/.codex/generated_images/01a1291d-c3b9-7561-8e22-50fb54ac485e/exec-afd8c73f-12e5-410d-9254-01ee41e19e1e.png`. Creative edit: built-in image_gen; JPEG export: macOS sips, quality 90.
+
+Exact follow-up prompt:
+
+```text
+Use case: precise-object-edit.
+Edit target: the supplied landing-page illustration.
+Make ONLY this small alignment correction: translate the entire row of three Dock tiles ("Cod", "Cre", "Publ"), including their shadows, approximately 75–80 pixels LEFT on the existing 1536 × 1024 canvas. Their group center should sit directly under the horizontal center of the large foreground "Create" window, not to its right. Keep all three tiles at exactly their current vertical position, size, spacing, color, corner rounding and label typography. Keep the labels EXACTLY "Cod", "Cre", "Publ", in that order.
+Keep the canvas size 1536 × 1024. Preserve every other element and its position: all three terminal windows, their borders and titles, the two-column document with its inline coral discussion and blue caret, the terminal area, the phone, the background, and the shadows. Do not redesign, rescale, recolor or move anything else. Remove the old tile positions cleanly into the same uniform off-white background. Clean smooth surfaces, no added texture or marks.
 ```
