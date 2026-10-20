@@ -34,7 +34,7 @@ I removed a check so we focus on what needs my judgment.
 
 ### [A hub for agents across machines, with phone and voice access](https://yunxin.github.io/rethink-terminal/hub-across-machines/)
 
-AgentTerm shows my agents transcribed speech, and they correct garbled text using the context of our work.
+AgentTerm annotates transcribed speech, and my agents correct garbled text using the context of our work.
 
 ---
 
