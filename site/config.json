@@ -1,7 +1,7 @@
 {
   "url": "https://yunxin.github.io/rethink-terminal/",
   "repository": "https://github.com/albertwujj/agent-term",
-  "author": "Andy Yunxin Wu",
+  "author": "Yunxin Wu",
   "description": "Personal notes on the design decisions behind AgentTerm.",
   "essays": [
     {
