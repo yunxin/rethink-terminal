@@ -6,7 +6,7 @@ I now use it for almost all my work: coding, planning, review and drafting, from
 
 So I have been building AgentTerm since January, and it has changed how I work ([demo](https://github.com/albertwujj/agent-term#demo)). These notes share the thinking behind its design.
 
-[![AgentTerm: one focused agent window with a two-page document and inline discussion, other sessions behind it, matching session tiles, and phone access.](docs/assets/agentterm-portal-aligned-4316aa3d3d00.jpg)](https://github.com/albertwujj/agent-term#demo)
+[![AgentTerm: an inline AI reply and document caret in one focused agent window, an empty dimmed terminal prompt, other sessions behind it, matching session tiles, and phone access.](docs/assets/agentterm-portal-inline-ai-8148a0089952.jpg)](https://github.com/albertwujj/agent-term#demo)
 
 ## Rethinking the terminal
 
