@@ -10,7 +10,7 @@ So I have been building AgentTerm since January, and it has changed how I work (
 
 ## Rethinking the terminal
 
-### [Why I give each lead agent its own OS window and a unique Dock tile or taskbar button](https://yunxin.github.io/rethink-terminal/own-os-window/)
+### [Why I give each lead agent its own OS window and icon](https://yunxin.github.io/rethink-terminal/own-os-window/)
 
 Agents show up when needed.
 

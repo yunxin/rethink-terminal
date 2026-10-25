@@ -1,4 +1,4 @@
-# Why I give each lead agent its own OS window and a unique Dock tile or taskbar button
+# Why I give each lead agent its own OS window and icon
 
 My agent sessions accumulate. A few are active at any moment, one fixing a bug, another with a plan I haven't read yet, and I switch between them all day. Many more are waiting, some on a reply to an email I sent. I keep all of them, because almost any of them may need me again: a finished fix can have follow-ups days later.
 
