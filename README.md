@@ -42,4 +42,4 @@ AgentTerm annotates transcribed speech, and my agents correct garbled text using
 
 AgentTerm has other features and design choices not covered above, such as [commenting on agent output](https://github.com/albertwujj/agent-term/blob/main/docs/comment.md), [copying it without reformatting](https://github.com/albertwujj/agent-term/blob/main/docs/copy.md), [connecting to an IDE](https://github.com/albertwujj/agent-term/blob/main/docs/ide.md), [running long jobs](https://github.com/albertwujj/agent-term/blob/main/docs/jobs.md), [coordinating a shared workspace](https://github.com/albertwujj/agent-term/blob/main/docs/lock.md), and [setting up and invoking guides across AI CLIs using a namespace convention based on folder paths](https://github.com/albertwujj/agent-term/blob/main/docs/conventions.md#guides-across-cli-vendors).
 
-Check out the [AgentTerm repo](https://github.com/albertwujj/agent-term#agentterm), try it and see how it improves your work, and build on it.
+Use [AgentTerm](https://github.com/albertwujj/agent-term#agentterm) as is, or adapt it to your work.
