@@ -87,6 +87,9 @@ hr { height: 0; margin: 2.75rem 0 1.4rem; border: 0; border-top: 1px solid var(-
 .skip-link { position: absolute; top: 0; left: 1rem; padding: 0.5rem 0.75rem; transform: translateY(-150%); background: var(--paper); z-index: 1; }
 .skip-link:focus { transform: translateY(0); }
 
+@media (min-width: 521px) {
+  .landing p:has(> a > img) { transform: translateX(-12px); }
+}
 @media (max-width: 520px) {
   body { font-size: 17px; }
   .page { padding: 1.25rem 1.25rem 2rem; }
