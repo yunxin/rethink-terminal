@@ -8,6 +8,7 @@ const { createHash } = require('node:crypto');
 const { execFileSync } = require('node:child_process');
 const MarkdownIt = require('markdown-it');
 const config = require('./config.json');
+const frameDiagram = require('./diagram-frame.cjs');
 
 const root = path.resolve(__dirname, '..');
 const output = path.resolve(process.argv[2] || path.join(root, 'output/rethink-terminal'));
@@ -20,11 +21,17 @@ const pages = [{ file: 'README.md', slug: '', number: null }, ...config.essays.m
 const routes = new Map(pages.map(page => [path.join(root, page.file), `${base}${page.slug ? page.slug + '/' : ''}`]));
 const assets = new Map();
 const diagrams = [];
+const framedAssets = new Map();
 
 function asset(file) {
   const relative = path.relative(root, file).split(path.sep).join('/');
   if (relative.startsWith('../') || !fs.statSync(file).isFile()) throw new Error(`Invalid asset: ${file}`);
-  const destination = `media/${relative}`;
+  let destination = `media/${relative}`;
+  if (/\.svg$/i.test(file)) {
+    if (!framedAssets.has(file)) framedAssets.set(file, frameDiagram(fs.readFileSync(file, 'utf8')));
+    const hash = createHash('sha256').update(framedAssets.get(file)).digest('hex').slice(0, 12);
+    destination = destination.replace(/\.svg$/i, `-${hash}.svg`);
+  }
   assets.set(file, destination);
   return `${base}${destination}`;
 }
@@ -128,7 +135,7 @@ async function main() {
       await tab.addScriptTag({ path: path.join(path.dirname(require.resolve('mermaid/package.json')), 'dist/mermaid.min.js') });
       await tab.evaluate(() => mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: 'base', fontFamily: 'Arial, sans-serif', themeVariables: { fontSize: '16px', primaryColor: '#e8eeed', primaryTextColor: '#242e36', primaryBorderColor: '#879a9d', lineColor: '#687c83', clusterBkg: '#f0f1ed', clusterBorder: '#c2ccc9' }, flowchart: { htmlLabels: false, useMaxWidth: true } }));
       for (const diagram of diagrams) {
-        const { svg, fullSize } = await tab.evaluate(async ({ id, code }) => {
+        const { fullSize } = await tab.evaluate(async ({ id, code }) => {
           const { svg } = await mermaid.render(id, code);
           // Mermaid's HTML labels can contain <br>, valid inline but invalid in an SVG document.
           const element = new DOMParser().parseFromString(svg, 'text/html').querySelector('svg');
@@ -136,12 +143,14 @@ async function main() {
           const fullSize = new XMLSerializer().serializeToString(element);
           const document = new DOMParser().parseFromString(fullSize, 'image/svg+xml');
           if (document.querySelector('parsererror')) throw new Error(`Invalid standalone diagram: ${id}`);
-          return { svg, fullSize };
+          return { fullSize };
         }, { id: diagram.id, code: diagram.code });
-        const diagramPath = `assets/diagrams/${diagram.page.slug}-${diagram.id}.svg`;
+        const framed = frameDiagram(fullSize);
+        const hash = createHash('sha256').update(framed).digest('hex').slice(0, 12);
+        const diagramPath = `assets/diagrams/${diagram.page.slug}-${diagram.id}-${hash}.svg`;
         fs.mkdirSync(path.join(output, 'assets/diagrams'), { recursive: true });
-        fs.writeFileSync(path.join(output, diagramPath), fullSize);
-        diagram.page.body = diagram.page.body.replace(`<div class="diagram" data-diagram="${diagram.id}"></div>`, `<div class="diagram"><a href="${base}${diagramPath}" aria-label="Open the diagram at full size">${svg}</a></div>`);
+        fs.writeFileSync(path.join(output, diagramPath), framed);
+        diagram.page.body = diagram.page.body.replace(`<div class="diagram" data-diagram="${diagram.id}"></div>`, `<div class="diagram"><a href="${base}${diagramPath}" aria-label="Open the diagram at full size">${framed}</a></div>`);
       }
     } finally { await browser.close(); }
   }
@@ -156,7 +165,8 @@ async function main() {
   for (const [source, relative] of assets) {
     const destination = path.join(output, relative);
     fs.mkdirSync(path.dirname(destination), { recursive: true });
-    fs.copyFileSync(source, destination);
+    if (framedAssets.has(source)) fs.writeFileSync(destination, framedAssets.get(source));
+    else fs.copyFileSync(source, destination);
   }
   fs.mkdirSync(path.join(output, 'assets'), { recursive: true });
   fs.writeFileSync(path.join(output, 'assets/style.css'), stylesheet);

@@ -27,7 +27,10 @@ Open `http://localhost:8000/rethink-terminal/`. The default build directory is
 The builder converts Markdown to HTML, rewrites links between notes, copies
 referenced media, and renders Mermaid diagrams as static SVG. Standalone SVG exports are
 serialized and validated as XML. Reading the website requires no JavaScript or
-external fonts. The snapshots under `docs/assets` illustrate AgentTerm and keep
+external fonts. Authored SVG diagrams and Mermaid exports receive the same frame
+through `diagram-frame.cjs`, including their clickable full-size files. Diagram
+asset URLs include a content hash so updated drawings do not reuse cached images.
+The snapshots under `docs/assets` illustrate AgentTerm and keep
 the media URLs used by the original published site.
 
 ## Publishing
