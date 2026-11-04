@@ -1,10 +1,10 @@
 # Rethink the terminal: A portal to AI
 
-Working with AI has fundamentally changed what I use a terminal for.
+Working with AI has fundamentally changed the nature of my work.
 
-I now use it for almost all my work: coding, planning, review and drafting, from start to finish, and when revisiting it later. My focus is on understanding and steering AI’s work rather than running commands. That calls for fresh designs around this new kind of interaction, both inside the window and across the desktop.
+My focus is on understanding and steering AI’s work. That calls for designing the interface around this new way of working, rather than fitting AI into old workflows.
 
-So I have been building AgentTerm since January, and it has changed how I work ([demo](https://github.com/albertwujj/agent-term#demo)). These notes share the thinking behind its design.
+So I have been building AgentTerm since January. I now use it for almost all my work, from shaping an idea to turning it into working code, and when revisiting the work later ([demo](https://github.com/albertwujj/agent-term#demo)). These notes share the thinking behind its design.
 
 [![AgentTerm: upright agent windows with one focused document, an inline AI reply between passages, matching session tiles, and phone access.](docs/assets/agentterm-portal-upright-inline-ai-f31b98022622.jpg)](https://github.com/albertwujj/agent-term#demo)
 
@@ -27,8 +27,6 @@ I can edit the rendered content to propose changes; my agent refines it and repl
 AgentTerm understands agents; agents understand AgentTerm.
 
 ## Building on the terminal
-
-I have been adding capabilities on top of this new terminal.
 
 ### [Curated code review: explanations grounded in code](https://yunxin.github.io/rethink-terminal/curated-review/)
 
