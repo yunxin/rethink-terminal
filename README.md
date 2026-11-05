@@ -2,7 +2,7 @@
 
 Working with AI has fundamentally changed the nature of my work.
 
-My focus is no longer on every detail, but on understanding and steering AI’s work. That calls for reimagining the place where I work with agents, rather than simply extending existing interfaces.
+My focus is no longer on every detail, but on understanding and steering AI’s work. That calls for reimagining the place where I work with AI agents, rather than simply extending existing interfaces.
 
 So I have been building and experimenting with AgentTerm since January. It has become my portal to AI: shaping an idea, turning it into working code, and revisiting the work later ([demo](https://github.com/albertwujj/agent-term#demo)). These notes share the thinking behind its design.
 
