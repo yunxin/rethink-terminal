@@ -1,4 +1,4 @@
-# A portal to AI
+# My portal to AI
 
 AI has fundamentally changed how I work.
 
