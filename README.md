@@ -2,9 +2,9 @@
 
 Working with AI has fundamentally changed the nature of my work.
 
-My focus is no longer on every detail, but on understanding and steering AI’s work. That calls for designing the interface around this new way of working, rather than simply extending existing interfaces.
+My focus is no longer on every detail, but on understanding and steering AI’s work. That calls for reimagining the place where I work with agents, rather than simply extending existing interfaces.
 
-So I have been building AgentTerm since January. I now use it for almost all my work, from shaping an idea to turning it into working code, and when revisiting the work later ([demo](https://github.com/albertwujj/agent-term#demo)). These notes share the thinking behind its design.
+So I have been building and experimenting with AgentTerm since January. It has become my portal to AI: shaping an idea, turning it into working code, and revisiting the work later ([demo](https://github.com/albertwujj/agent-term#demo)). These notes share the thinking behind its design.
 
 [![AgentTerm: upright agent windows with one focused document, an inline AI reply between passages, matching session tiles, and phone access.](docs/assets/agentterm-portal-upright-inline-ai-f31b98022622.jpg)](https://github.com/albertwujj/agent-term#demo)
 
