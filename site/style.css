@@ -21,20 +21,20 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-size: 18px; 
 .page { max-width: 48rem; margin: 0 auto; padding: 2rem 1.75rem 3rem; overflow-wrap: break-word; }
 .site-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 3.5rem; font-size: 0.8rem; }
 .site-header a { text-decoration: none; }
-.series-link { color: var(--muted); }
+.series-link { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
 .repo-link { white-space: nowrap; font-weight: 600; }
 
 h1 { margin: 0 0 1.1rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.1rem, 5.5vw, 3.15rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.14; text-wrap: balance; }
 .landing h1 { max-width: 25ch; }
-.landing h1 .rethink-word { white-space: nowrap; }
+.rethink-word { white-space: nowrap; font-weight: 650; }
 /* Re blue, th yellow, i red, n blue, k green. */
-.landing h1 .rethink-word > span:nth-child(1),
-.landing h1 .rethink-word > span:nth-child(2),
-.landing h1 .rethink-word > span:nth-child(6) { color: var(--accent-blue); }
-.landing h1 .rethink-word > span:nth-child(3),
-.landing h1 .rethink-word > span:nth-child(4) { color: var(--accent-yellow); }
-.landing h1 .rethink-word > span:nth-child(5) { color: var(--accent-red); }
-.landing h1 .rethink-word > span:nth-child(7) { color: var(--accent-green); }
+.rethink-word > span:nth-child(1),
+.rethink-word > span:nth-child(2),
+.rethink-word > span:nth-child(6) { color: var(--accent-blue); }
+.rethink-word > span:nth-child(3),
+.rethink-word > span:nth-child(4) { color: var(--accent-yellow); }
+.rethink-word > span:nth-child(5) { color: var(--accent-red); }
+.rethink-word > span:nth-child(7) { color: var(--accent-green); }
 .article h1 { font-size: clamp(2rem, 4.7vw, 2.9rem); line-height: 1.18; }
 p { margin: 0 0 1.15rem; }
 
@@ -49,7 +49,7 @@ p { margin: 0 0 1.15rem; }
 .landing h3 a { color: var(--ink); text-decoration: none; }
 .landing h3 a::after { content: "\00a0→"; color: var(--note-accent, var(--link)); font-weight: 500; }
 .landing h3 a:hover { color: var(--link); }
-/* Repeat the title’s color groups across the note links. */
+/* Repeat the wordmark’s color groups across the note links, using darker gold for the arrows. */
 .landing h3:nth-child(5n + 1 of h3) a,
 .landing h3:nth-child(5n + 4 of h3) a { --note-accent: var(--accent-blue); }
 .landing h3:nth-child(5n + 2 of h3) a { --note-accent: var(--accent-gold); }

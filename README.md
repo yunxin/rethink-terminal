@@ -1,4 +1,4 @@
-# Rethink the terminal: A portal to AI
+# A portal to AI
 
 AI has fundamentally changed how I work.
 
